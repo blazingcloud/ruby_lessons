@@ -1,5 +1,5 @@
 
-class Songs
+class Song
    @@total_songs = 0
 
    def initialize

@@ -1,6 +1,6 @@
 
-class FixNum
+class Fixnum
   def even?
-    self $ 2 == 0
+    self % 2 == 0
   end
 end
