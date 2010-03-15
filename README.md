@@ -14,6 +14,10 @@ Welcome to Ruby!
 
         alias spec="spec --color --format nested"
 
+* For lesson 14
+
+      sudo gem install fakeweb
+
 ## Resources
 
 ###Ruby Language
@@ -51,14 +55,18 @@ If you didn’t find the answer and you need to ask your question:
 
 ## Related Projects
 
-* [Test-First Teaching](http://github.com/ultrasaurus/test-first-teaching)
+* [TestFirst.org](http://testfirst.org)
 * [Ruby Koans](http://github.com/edgecase/ruby_koans)
 * [Ruby Mission](http://github.com/alexch/mission)
 * [RailsBridge](http://groups.google.com/group/railsbridge)
 * [Test-Driven](http://www.slideshare.net/alexchaffee/test-driven) presentation by Ale Chaffee
 
+### As a last resort
+* [Solutions](http://github.com/ultrasaurus/test-first-teaching)
+
 ## Credits
 
 * Test-First Teaching Concept by Alex Chaffee
-* Some exercises borrowed from  [Test-First Teaching](http://github.com/ultrasaurus/test-first-teaching) project
-* Additional examples and class by Sarah Allen
+* All exercises cross-published at [TestFirst.org](http://testfirst.org) where some were created in collaboration with Liah Hansen
+* Most examples and class by Sarah Allen
+
