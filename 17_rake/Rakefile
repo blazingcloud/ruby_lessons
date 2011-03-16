@@ -1,0 +1,20 @@
+require 'organize_secrets.rb'
+namespace "secrets" do
+  desc "makes secrets directory"
+  task :mkdir do |t|
+    os = OrganizeSecrets.new
+    os.make_secrets_directory unless(File.exist?(os.secrets_dir))
+  end
+
+  desc "encodes files in secrets directory"
+  task :encode_files => :mkdir do |t|
+    os = OrganizeSecrets.new
+    os.encode_files unless Dir.entries(os.source_dir).length == Dir.entries(os.secrets_dir).length
+  end
+
+  desc "adds a number to filenames in secrets directory"
+  task :number_files => :encode_files do |t|
+    os = OrganizeSecrets.new
+    os.number_files
+  end
+end
