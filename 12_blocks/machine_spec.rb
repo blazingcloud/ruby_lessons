@@ -1,4 +1,4 @@
-require 'machine'
+require './machine'
 
 describe Machine do
 
