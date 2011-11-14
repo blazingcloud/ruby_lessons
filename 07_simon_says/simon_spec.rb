@@ -1,4 +1,4 @@
-require 'simon'
+require './simon'
 
 describe Simon do
   
