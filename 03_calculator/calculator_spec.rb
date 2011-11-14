@@ -1,4 +1,4 @@
-require "calculator"
+require "#{File.dirname(__FILE__)}/calculator"
 
 describe Calculator do
   it "should have a default name" do
