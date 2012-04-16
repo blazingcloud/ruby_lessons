@@ -28,4 +28,9 @@ describe "#translate" do
     s.should == "ethay ickquay ownbray oxfay"
   end
 
+  it "should not translate 'tu' as 'qu' " do
+    s = translate("the quick turn")
+    s.should == "ethay ickquay urntay"
+  end
+
 end

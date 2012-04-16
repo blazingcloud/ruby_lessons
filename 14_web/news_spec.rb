@@ -1,5 +1,5 @@
 require 'fakeweb'
-require 'news'
+require './news'
 
 describe News do
 
@@ -20,13 +20,6 @@ describe News do
   end
 
   describe "#top_story" do
-    it "should find the first list item after 'Latest news' heading" do
-      FakeWeb.register_uri(:get, "http://www.test1.com", :body => "<h4>Latest news</h4><ul><li><a href=\"http://something.com\">Story Name</a>")
-      @news.uri = "http://www.test1.com"
-      @news.top_story.should == 
-        {:url => "http://something.com",
-         :title => "Story Name"}
-    end
 
     it "should return the first headlines with url listed under 'Latest News'" do
       @news.uri = "http://www.cnn.com"
