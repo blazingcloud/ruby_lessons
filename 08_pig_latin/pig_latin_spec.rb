@@ -27,10 +27,16 @@ describe "#translate" do
     s = translate("the quick brown fox")
     s.should == "ethay ickquay ownbray oxfay"
   end
-
-  it "should not translate 'tu' as 'qu' " do
-    s = translate("the quick turn")
-    s.should == "ethay ickquay urntay"
+  describe "edge cases" do
+    it "should translate a into away" do
+      pending " http://www.piglatin.org/ "
+      s = translate("a")
+      s.should == "away"
+    end
+    it "should not translate 'tu' as 'qu' " do
+      s = translate("the quick turn")
+      s.should == "ethay ickquay urntay"
+    end
   end
 
 end

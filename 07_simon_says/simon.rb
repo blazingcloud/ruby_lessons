@@ -6,7 +6,7 @@ class Simon
     word.upcase
   end
   def repeat(word,num = 2)
-    ((word + " ")* num).chop
+    ((word + " ")* num).strip
   end
   def start_of_word(word,num)
     word.slice(0,num)
