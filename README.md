@@ -16,7 +16,7 @@ Welcome to Ruby!
 
 * For lesson 14
 
-      gem install fakeweb
+        gem install fakeweb
 
 ## Resources
 
