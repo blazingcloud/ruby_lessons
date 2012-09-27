@@ -1,4 +1,4 @@
-require "array_extension"
+require "#{File.dirname(__FILE__)}/array_extension"
 
 describe Array do
 
