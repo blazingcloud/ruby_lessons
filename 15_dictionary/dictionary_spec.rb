@@ -1,4 +1,4 @@
-require 'dictionary'
+require "#{File.dirname(__FILE__)}/dictionary"
 
 describe Dictionary do
   before do

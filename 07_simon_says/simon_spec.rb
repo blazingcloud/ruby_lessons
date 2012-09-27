@@ -1,4 +1,4 @@
-require './simon'
+require "#{File.dirname(__FILE__)}/simon"
 
 describe Simon do
   

@@ -1,5 +1,5 @@
 require 'fakeweb'
-require './news'
+require "#{File.dirname(__FILE__)}/news"
 
 describe News do
 
