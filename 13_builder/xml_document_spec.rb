@@ -19,7 +19,7 @@ describe XmlDocument do
     @xml.hello(:name => 'dolly').should == "<hello name='dolly'/>"
   end
 
-  it "renders a tag with othrr attributes" do
+  it "renders a tag with other attributes" do
     @xml.hello(:foo => 'bar').should == "<hello foo='bar'/>"
   end
   
