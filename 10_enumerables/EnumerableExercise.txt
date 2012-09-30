@@ -1,0 +1,20 @@
+1. How many vehicles have more than 2 wheels?
+$vehicles.select{|n| n[:wheels] > 2}.count
+ => 2 
+
+1.9.3-p194 :005 > $vehicles.select{|n| n[:wheels] > 2}.map{|f| f[:name]}
+ => ["Car", "Truck"]
+
+2. Which vehicles can I use in water?
+$vehicles.select{|n| n[:classes].include? :water}
+ => [{:name=>"Boat", :wheels=>0, :classes=>[:water]}]
+
+$vehicles.select{|n| n[:classes].include? :air}
+ => [{:name=>"Plane", :wheels=>0, :classes=>[:air]}, {:name=>"Helicopter", :wheels=>0, :classes=>[:air]}, {:name=>"Sea Plane", :wheels=>0, :classes=>[:air, :ground]}]
+
+$vehicles.select{|n| n[:classes].include? :air}.map{|f| f[:name]}
+ => ["Plane", "Helicopter", "Sea Plane"]
+
+3. What are the classes of vehicles with less than 2 wheels?
+$vehicles.select{|n| n[:wheels] <2 }.map{|f| f[:classes]}
+ => [[:water], [:air], [:air], [:air, :ground]] 
