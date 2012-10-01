@@ -1,5 +1,5 @@
 require 'fileutils'
-require 'organize_secrets'
+require './organize_secrets'
 describe OrganizeSecrets do
   before do
     @current_dir = File.dirname(File.expand_path(__FILE__))

@@ -10,7 +10,6 @@ describe Machine do
   end
 
   it "executes a block and returns a number" do
-    pending
     result = Machine.new.do_something do
       3 + 4
     end
@@ -18,7 +17,6 @@ describe Machine do
   end
 
   it "executes a block in the context of the calling method" do 
-    pending
     n = 1
     result = Machine.new.do_something do
       n + 4
@@ -28,7 +26,6 @@ describe Machine do
 
   
   it "executes a block 3 times and returns the result" do 
-    pending
     n = 5
     result = Machine.new.do_something(3) do
       n += 1

@@ -9,5 +9,6 @@ class Song
    def Song.total
     @@total_songs
   end
+
 end
 

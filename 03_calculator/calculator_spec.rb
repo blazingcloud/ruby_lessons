@@ -21,7 +21,6 @@ describe Calculator do
   end
 
   it "should increment the number of calculations" do
-    pending
     c = Calculator.new
     c.add(1,1)
     c.num_calculations.should == 1

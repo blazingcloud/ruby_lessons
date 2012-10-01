@@ -1,4 +1,4 @@
-require 'organize_secrets.rb'
+require './organize_secrets.rb'
 namespace "secrets" do
   desc "makes secrets directory"
   task :mkdir do |t|

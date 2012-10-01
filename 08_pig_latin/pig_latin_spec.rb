@@ -33,4 +33,9 @@ describe "#translate" do
     s.should == "ethay ickquay urntay"
   end
 
+  it "should translate 'squid' as 'idsquay'" do
+    s = translate("squid")
+    s.should == "idsquay"
+  end
+
 end

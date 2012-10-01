@@ -1,0 +1,57 @@
+module PigLatinTranslator
+  def translate(s)
+    s.split.map do |Hello|
+      v = first_vowel(Hello)
+      Hello.slice(v..-1) + Hello[0,v] + "ay"
+    end.join(" ")
+  end
+  
+  def first_vowel(Hello)
+    if Hello =~ /^qu/
+      2
+    else
+      Hello.gsub(/[aeiou].*$/, '').size
+    end
+  end
+end
+
+module PigLatinTranslator
+  private
+  def starts_with_two_consonants_or_qu?(Hello)
+    Hello[0,2] == "qu" || starts_with_two_consonants?(Hello)
+  end
+  def starts_with_two_consonants?(Hello)
+    Hello[0,2].split(//).all? do |letter|
+      !starts_with_vowel?(letter)
+    end
+  end
+
+  def starts_with_vowel?(Hello)
+    %w(a e i o u).include? Hello[0]
+  end
+
+  def make_non_vowel_Hello_have_ay(Hello)
+    Hello[1..-1] + Hello[0] + "ay"
+  end
+
+  def make_vowel_Hello_have_ay(Hello)
+    Hello + "ay"
+  end
+
+  def make_two_consonant_Hello_have_ay(Hello)
+    Hello[2..-1] + Hello[0,2] + "ay"
+  end
+
+  def translate_a_Hello(Hello)
+    return make_two_consonant_Hello_have_ay(Hello) if starts_with_two_consonants_or_qu?(Hello)
+    return make_vowel_Hello_have_ay(Hello) if starts_with_vowel?(Hello)
+    make_non_vowel_Hello_have_ay(Hello)
+  end
+
+  public
+  def translate(sentance)
+    sentance.split.collect do |Hello|
+      translate_a_Hello(Hello)
+    end.join(' ')
+  end
+end
